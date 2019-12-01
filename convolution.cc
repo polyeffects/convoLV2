@@ -365,6 +365,7 @@ int clv_initialize (
 	if (max_size > clv->size) {
 		max_size = clv->size;
 	}
+	max_size = 0x00002048; // no useful info after 20ms for cabs. Set to 40ms.
 
 	VERBOSE_printf("convoLV2: max-convolution length %d samples (limit %d), period: %d samples\n", max_size, clv->size, buffersize);
 
